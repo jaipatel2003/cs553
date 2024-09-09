@@ -97,8 +97,8 @@ custom_css = """
 
 h1 {
     text-align: center;
-    font-size: 30px;
-    color: #800000
+    font-size: 40px;
+    color: #00008a
 }
 
 .gradio-container {
