@@ -94,11 +94,6 @@ custom_css = """
     font-family: 'Arial', sans-serif;
 }
 
-h1 {
-    font-size: 30px;
-    text-align: center;
-}
-
 .gradio-container {
     max-width: 700px;
     margin: 0 auto;
@@ -134,7 +129,7 @@ h1 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
-    color: #333;
+    color: #800000;
 }
 """
 
