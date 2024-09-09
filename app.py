@@ -87,13 +87,14 @@ def cancel_inference():
     stop_inference = True
 
 # Custom CSS for a fancy look
+
 custom_css = """
 #main-container {
     background-color: #f0f0f0;
     font-family: 'Arial', sans-serif;
 }
 
-.h1 {
+h1 {
     font-size: 30px;
     text-align: center;
 }
