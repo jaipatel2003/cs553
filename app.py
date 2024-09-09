@@ -95,6 +95,7 @@ custom_css = """
 
 .h1 {
     font-size: 30px;
+    text-align: center;
 }
 
 .gradio-container {
@@ -138,7 +139,7 @@ custom_css = """
 
 # Define the interface
 with gr.Blocks(css=custom_css) as demo:
-    gr.Markdown("<h1 style='text-align: center;'>🤖 Adina and Jai's Chatbot 🤖</h1>")
+    gr.Markdown("<h1>🤖 Adina and Jai's Chatbot 🤖</h1>")
     gr.Markdown("Interact with the AI chatbot using customizable settings below.")
 
     with gr.Row():
