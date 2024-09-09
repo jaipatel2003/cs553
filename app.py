@@ -163,8 +163,8 @@ with gr.Blocks(css=custom_css) as demo:
 
     user_input = gr.Textbox(show_label=False, placeholder="Type your message here...", max_lines = 40)
 
-    with gr.Row():
-        clearbutton = gr.ClearButton.add(user_input)
+    #with gr.Row():
+    #    clearbutton = gr.ClearButton.add(user_input)
 
 
     cancel_button = gr.Button("Cancel Inference", variant="danger")
@@ -173,7 +173,8 @@ with gr.Blocks(css=custom_css) as demo:
     user_input.submit(respond, [user_input, chat_history, system_message, max_tokens, temperature, top_p, use_local_model], chat_history)
 
     cancel_button.click(cancel_inference)
-    ClearButton.click(clearbutton)
+    
+    #ClearButton.click(clearbutton)
 
 if __name__ == "__main__":
     demo.launch(share=False)  # Remove share=True because it's not supported on HF Spaces
