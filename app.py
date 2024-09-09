@@ -89,9 +89,16 @@ def cancel_inference():
 # Custom CSS for a fancy look
 
 custom_css = """
+
 #main-container {
     background-color: #f0f0f0;
     font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-color: #800000
 }
 
 .gradio-container {
@@ -123,6 +130,7 @@ custom_css = """
 
 .gr-chat {
     font-size: 16px;
+    font-family: 'Robotica';
 }
 
 #title {
@@ -143,13 +151,13 @@ with gr.Blocks(css=custom_css) as demo:
         use_local_model = gr.Checkbox(label="Use Local Model", value=False)
 
     with gr.Row():
-        max_tokens = gr.Slider(minimum=1, maximum=2048, value=512, step=1, label="Max new tokens")
+        max_tokens = gr.Slider(minimum=1, maximum=3000, value=500, step=50, label="Max new tokens", randomize = True)
         temperature = gr.Slider(minimum=0.1, maximum=4.0, value=0.7, step=0.1, label="Temperature")
         top_p = gr.Slider(minimum=0.1, maximum=1.0, value=0.95, step=0.05, label="Top-p (nucleus sampling)")
 
     chat_history = gr.Chatbot(label="Chat")
 
-    user_input = gr.Textbox(show_label=False, placeholder="Type your message here...")
+    user_input = gr.Textbox(show_label=False, placeholder="Type your message here...", max_lines = 40)
 
     cancel_button = gr.Button("Cancel Inference", variant="danger")
 
